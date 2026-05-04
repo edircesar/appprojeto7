@@ -94,6 +94,7 @@ $apps = $pdo->query("SELECT * FROM apps ORDER BY id DESC")->fetchAll();
             </div>
             <ul class="sidebar-menu">
                 <li><a href="dashboard" class="active"><span class="material-icons">dashboard</span> Gerenciar Apps</a></li>
+                <li><a href="usuarios"><span class="material-icons">people</span> Gerenciar Usuários</a></li>
                 <li><a href="/" target="_blank"><span class="material-icons">launch</span> Ver Site / Cadastro</a></li>
                 <li><a href="perfil"><span class="material-icons">person</span> Minha Conta</a></li>
                 <li style="margin-top: 20px;"><a href="../api/logout.php" style="color: #e74c3c;"><span class="material-icons">logout</span> Sair</a></li>
