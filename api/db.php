@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
 $dbname = 'u861144328_appprojeto7';
-$username = 'u861144328_cesar'; // Placeholder, user will need to adjust if different
+$username = 'u861144328_projeto'; // Placeholder, user will need to adjust if different
 $password = 'Deus10Deus@';     // Placeholder, user will need to adjust if different
 
 try {
@@ -10,7 +10,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     header('Content-Type: application/json');
-    echo json_encode(['success' => false, 'message' => 'Database connection failed: ' . $e->getMessage()]);
+    echo json_encode(['success' => false, 'message' => 'Database connection failed']);
     exit;
 }
 ?>
