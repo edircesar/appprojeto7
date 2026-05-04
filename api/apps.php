@@ -18,7 +18,8 @@ if (strpos($authHeader, 'Bearer ') !== false) {
 if ($isLoggedIn) {
     $stmt = $pdo->query("SELECT id, name, description, url, icon, category, is_public FROM apps ORDER BY category, name");
 } else {
-    $stmt = $pdo->query("SELECT id, name, description, url, icon, category, is_public FROM apps WHERE is_public = 1 ORDER BY category, name");
+    // Return all apps but without URL for unauthenticated users
+    $stmt = $pdo->query("SELECT id, name, description, '' as url, icon, category, is_public FROM apps ORDER BY category, name");
 }
 
 $apps = $stmt->fetchAll();

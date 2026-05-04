@@ -183,6 +183,9 @@ const AppManager = {
 
                 const card = document.createElement('a');
                 card.className = 'app-item btn-access';
+                if (!this.user) {
+                    card.classList.add('locked');
+                }
                 card.setAttribute('data-appid', app.id);
                 card.setAttribute('data-appname', app.name);
                 

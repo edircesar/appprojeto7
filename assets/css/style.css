@@ -194,6 +194,22 @@ body {
   font-weight: 400;
 }
 
+/* Locked Apps Style */
+.app-item.locked {
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+.app-item.locked .material-icons {
+  color: #999;
+}
+.app-item.locked:after {
+  content: 'lock';
+  font-family: 'Material Icons';
+  font-size: 14px;
+  margin-left: auto;
+  color: #aaa;
+}
+
 .btn {
   display: inline-block;
   background-color: var(--primary-color);
