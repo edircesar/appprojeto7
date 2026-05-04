@@ -1,0 +1,24 @@
+# Arquivos temporários e de sistema do Windows/macOS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# IDEs e Editores
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Composer e Node (se vir a usar)
+vendor/
+node_modules/
+
+# Logs e arquivos sensíveis
+*.log
+error_log
+
+# Uploads (Se tiver uma pasta de uploads futuramente)
+# uploads/

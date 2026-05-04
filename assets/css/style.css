@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #096D7F;
+  --primary-hover: #0B8196;
+  --accent-color: #FFC107;
+  --accent-hover: #ffb300;
+  --text-light: #FFFFFF;
+  --text-dark: #222222;
+  --text-muted: #666666;
+  --bg-color: #FFFFFF;
+  --border-color: #eaeaea;
+  --border-radius: 6px;
+  --header-height: 60px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  padding-top: var(--header-height);
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 40px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-item {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s;
+}
+.nav-item:hover {
+  color: var(--text-light);
+}
+.nav-item .material-icons {
+  font-size: 1.2rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #b3b3b3;
+}
+.lang-selector .material-icons {
+  font-size: 1.1rem;
+}
+.lang-selector select {
+  background: transparent;
+  color: #b3b3b3;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+.lang-selector select option {
+  color: var(--text-dark);
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.auth-buttons a {
+  color: var(--text-light);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: opacity 0.3s;
+}
+.auth-buttons a:hover {
+  opacity: 0.8;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+}
+.hero-logo {
+  height: 60px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+.hero h5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* App Grid / List */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 20px 60px;
+}
+
+.category-group {
+  margin-bottom: 40px;
+}
+.category-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px 24px;
+}
+
+.app-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+.app-item:hover {
+  color: var(--text-dark);
+}
+
+.app-item .material-icons {
+  font-size: 24px;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+.app-item:hover .material-icons {
+  color: var(--text-dark);
+}
+
+.app-item span.app-name {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.premium-badge {
+  background: var(--accent-color);
+  color: #000;
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  background: var(--bg-color);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transform: translateY(-20px);
+  transition: transform 0.3s;
+}
+.modal-overlay.active .modal-content {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+.modal-title {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-family: inherit;
+}
+.form-group input:focus {
+  border-color: var(--primary-color);
+}
+.btn-block {
+  width: 100%;
+}
+.form-switch {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+.form-switch a {
+  color: var(--primary-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 15px;
+  }
+  .logo img {
+    height: 28px;
+  }
+  .nav-links {
+    gap: 10px;
+  }
+  .header-right {
+    gap: 10px;
+  }
+  .auth-buttons {
+    gap: 10px;
+  }
+  .auth-buttons a {
+    font-size: 0.85rem;
+  }
+  .hero {
+    padding: 30px 15px;
+  }
+  .hero h5 {
+    font-size: 12px;
+  }
+  .app-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .container {
+    padding: 15px 15px 40px;
+  }
+}
+
+/* App Viewer Fixes */
+#appViewerContainer {
+  width: 100%;
+  background: #fff;
+}
+#closeAppViewerBtn {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0;
+  transition: color 0.2s;
+}
+#closeAppViewerBtn:hover {
+  color: var(--primary-color);
+}
+#appIframe {
+  width: 100%;
+  height: 100vh;
+  border: none;
+  display: block;
+}
