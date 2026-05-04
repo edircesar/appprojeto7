@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$dbname = 'projeto7_apphub';
-$username = 'root'; // Placeholder, user will need to adjust if different
-$password = '123mudar';     // Placeholder, user will need to adjust if different
+$dbname = 'u861144328_appprojeto7';
+$username = 'u861144328_cesar'; // Placeholder, user will need to adjust if different
+$password = 'Deus10Deus@';     // Placeholder, user will need to adjust if different
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);

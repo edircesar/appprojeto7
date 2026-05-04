@@ -1,6 +1,3 @@
-CREATE DATABASE IF NOT EXISTS `projeto7_apphub` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE `projeto7_apphub`;
-
 CREATE TABLE IF NOT EXISTS `users` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `name` VARCHAR(100) NOT NULL,
